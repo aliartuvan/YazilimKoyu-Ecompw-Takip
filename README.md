@@ -1,2 +1,2 @@
-# YazilimKoyu&Ecompw Takip
- Yazılım Köyü ve Ecompw organizasyonları için iş takip otomasyonu
+# YazilimKoyu&Ecompw-Takip
+ Yazılım Köyü ve Ecompw organizasyonları için iş takip uygulaması
