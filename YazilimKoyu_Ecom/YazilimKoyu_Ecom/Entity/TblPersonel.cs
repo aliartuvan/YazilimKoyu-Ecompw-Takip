@@ -29,6 +29,9 @@ namespace YazilimKoyu_Ecom.Entity
         public string Gorsel { get; set; }
         public Nullable<int> Departman { get; set; }
         public Nullable<bool> Durum { get; set; }
+        public string İl { get; set; }
+        public Nullable<System.DateTime> DogumTarihi { get; set; }
+        public string sifre { get; set; }
     
         public virtual TblDepartmanlar TblDepartmanlar { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

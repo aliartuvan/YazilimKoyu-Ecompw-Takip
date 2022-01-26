@@ -161,3 +161,8 @@ C:\Users\CASPER\source\repos\YazilimKoyu_Ecom\YazilimKoyu_Ecom\bin\Debug\es\DevE
 C:\Users\CASPER\source\repos\YazilimKoyu_Ecom\YazilimKoyu_Ecom\bin\Debug\ja\DevExpress.Xpo.v21.2.resources.dll
 C:\Users\CASPER\source\repos\YazilimKoyu_Ecom\YazilimKoyu_Ecom\bin\Debug\ru\DevExpress.Xpo.v21.2.resources.dll
 C:\Users\CASPER\source\repos\YazilimKoyu_Ecom\YazilimKoyu_Ecom\obj\Debug\YazilimKoyu_Ecom.Forms.frmCvEleme.resources
+C:\Users\CASPER\source\repos\YazilimKoyu_Ecom\YazilimKoyu_Ecom\obj\Debug\YazilimKoyu_Ecom.Forms.frmGorevListesi.resources
+C:\Users\CASPER\source\repos\YazilimKoyu_Ecom\YazilimKoyu_Ecom\obj\Debug\YazilimKoyu_Ecom.Forms.frmGorev.resources
+C:\Users\CASPER\source\repos\YazilimKoyu_Ecom\YazilimKoyu_Ecom\obj\Debug\YazilimKoyu_Ecom.Forms.frmLogin.resources
+C:\Users\CASPER\source\repos\YazilimKoyu_Ecom\YazilimKoyu_Ecom\obj\Debug\YazilimKoyu_Ecom.Forms.frmMailTek.resources
+C:\Users\CASPER\source\repos\YazilimKoyu_Ecom\YazilimKoyu_Ecom\obj\Debug\YazilimKoyu_Ecom.Forms.frmBasvuruGor.resources

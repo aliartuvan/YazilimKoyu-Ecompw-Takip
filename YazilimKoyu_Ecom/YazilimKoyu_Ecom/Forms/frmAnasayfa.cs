@@ -21,7 +21,8 @@ namespace YazilimKoyu_Ecom.Forms
 
         private void frmAnasayfa_Load(object sender, EventArgs e)
         {
-        
+            webBrowser3.Navigate("https://www.yazilimkoyu.org/");
+            webBrowser2.Navigate("https://www.ecompw.com/");
             
         }
 

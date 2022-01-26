@@ -32,6 +32,8 @@ namespace YazilimKoyu_Ecom
             frm1.MdiParent = this;
 
             frm1.Show();
+
+            
         }
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -74,7 +76,9 @@ namespace YazilimKoyu_Ecom
 
         private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            Forms.frmMailTek frm1 = new Forms.frmMailTek();
+          
+            frm1.Show();
         }
 
         private void barButtonItem32_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -92,6 +96,36 @@ namespace YazilimKoyu_Ecom
             Forms.frmCV frm1 = new Forms.frmCV();
             frm1.MdiParent=this;
             frm1.Show();
+        }
+
+        private void barButtonItem12_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.frmGorevListesi frm = new Forms.frmGorevListesi();
+            frm.MdiParent=this;
+            frm.Show();
+        }
+
+        private void btnGorevTanimla_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.frmGorev frm = new Forms.frmGorev();
+          
+            frm.Show();
+        }
+
+        private void barButtonItem19_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem31_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.frmLogin frm = new Forms.frmLogin();
+            frm.Show();
+        }
+
+        private void barButtonItem8_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            
         }
     }
 }

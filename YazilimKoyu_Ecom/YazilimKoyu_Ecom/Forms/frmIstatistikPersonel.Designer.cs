@@ -41,13 +41,13 @@
             this.lblToplamFirma = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.lblSektor = new DevExpress.XtraEditors.LabelControl();
+            this.lblSektorsayisi = new DevExpress.XtraEditors.LabelControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.lblToplamDepartman = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.lblSehirSayisi = new DevExpress.XtraEditors.LabelControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
@@ -56,7 +56,7 @@
             this.lblAktifIs = new DevExpress.XtraEditors.LabelControl();
             this.lblAktifIsss = new DevExpress.XtraEditors.LabelControl();
             this.panelControl10 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
+            this.lblBugunGorevi = new DevExpress.XtraEditors.LabelControl();
             this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl11 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
@@ -256,8 +256,8 @@
             // 
             this.panelControl3.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.panelControl3.Appearance.Options.UseBackColor = true;
-            this.panelControl3.Controls.Add(this.labelControl5);
-            this.panelControl3.Controls.Add(this.labelControl6);
+            this.panelControl3.Controls.Add(this.lblSektor);
+            this.panelControl3.Controls.Add(this.lblSektorsayisi);
             this.panelControl3.Location = new System.Drawing.Point(289, 302);
             this.panelControl3.LookAndFeel.SkinMaskColor = System.Drawing.Color.DarkBlue;
             this.panelControl3.LookAndFeel.SkinMaskColor2 = System.Drawing.Color.Red;
@@ -267,30 +267,32 @@
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(255, 115);
             this.panelControl3.TabIndex = 16;
+            this.panelControl3.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl3_Paint);
             // 
-            // labelControl5
+            // lblSektor
             // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 24.8F, System.Drawing.FontStyle.Bold);
-            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Blue;
-            this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Appearance.Options.UseForeColor = true;
-            this.labelControl5.Location = new System.Drawing.Point(108, 52);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(26, 49);
-            this.labelControl5.TabIndex = 2;
-            this.labelControl5.Text = "0";
+            this.lblSektor.Appearance.Font = new System.Drawing.Font("Tahoma", 24.8F, System.Drawing.FontStyle.Bold);
+            this.lblSektor.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.lblSektor.Appearance.Options.UseFont = true;
+            this.lblSektor.Appearance.Options.UseForeColor = true;
+            this.lblSektor.Location = new System.Drawing.Point(108, 52);
+            this.lblSektor.Name = "lblSektor";
+            this.lblSektor.Size = new System.Drawing.Size(26, 49);
+            this.lblSektor.TabIndex = 2;
+            this.lblSektor.Text = "0";
+            this.lblSektor.Click += new System.EventHandler(this.labelControl5_Click);
             // 
-            // labelControl6
+            // lblSektorsayisi
             // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Blue;
-            this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Appearance.Options.UseForeColor = true;
-            this.labelControl6.Location = new System.Drawing.Point(68, 5);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(115, 22);
-            this.labelControl6.TabIndex = 0;
-            this.labelControl6.Text = "Sektör Sayısı";
+            this.lblSektorsayisi.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSektorsayisi.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.lblSektorsayisi.Appearance.Options.UseFont = true;
+            this.lblSektorsayisi.Appearance.Options.UseForeColor = true;
+            this.lblSektorsayisi.Location = new System.Drawing.Point(68, 5);
+            this.lblSektorsayisi.Name = "lblSektorsayisi";
+            this.lblSektorsayisi.Size = new System.Drawing.Size(115, 22);
+            this.lblSektorsayisi.TabIndex = 0;
+            this.lblSektorsayisi.Text = "Sektör Sayısı";
             // 
             // panelControl4
             // 
@@ -337,7 +339,7 @@
             // 
             this.panelControl5.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.panelControl5.Appearance.Options.UseBackColor = true;
-            this.panelControl5.Controls.Add(this.labelControl9);
+            this.panelControl5.Controls.Add(this.lblSehirSayisi);
             this.panelControl5.Controls.Add(this.labelControl10);
             this.panelControl5.Location = new System.Drawing.Point(565, 155);
             this.panelControl5.LookAndFeel.SkinMaskColor = System.Drawing.Color.Firebrick;
@@ -349,17 +351,18 @@
             this.panelControl5.Size = new System.Drawing.Size(255, 115);
             this.panelControl5.TabIndex = 20;
             // 
-            // labelControl9
+            // lblSehirSayisi
             // 
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 24.8F, System.Drawing.FontStyle.Bold);
-            this.labelControl9.Appearance.ForeColor = System.Drawing.Color.Blue;
-            this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Appearance.Options.UseForeColor = true;
-            this.labelControl9.Location = new System.Drawing.Point(108, 52);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(26, 49);
-            this.labelControl9.TabIndex = 2;
-            this.labelControl9.Text = "0";
+            this.lblSehirSayisi.Appearance.Font = new System.Drawing.Font("Tahoma", 24.8F, System.Drawing.FontStyle.Bold);
+            this.lblSehirSayisi.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.lblSehirSayisi.Appearance.Options.UseFont = true;
+            this.lblSehirSayisi.Appearance.Options.UseForeColor = true;
+            this.lblSehirSayisi.Location = new System.Drawing.Point(108, 52);
+            this.lblSehirSayisi.Name = "lblSehirSayisi";
+            this.lblSehirSayisi.Size = new System.Drawing.Size(26, 49);
+            this.lblSehirSayisi.TabIndex = 2;
+            this.lblSehirSayisi.Text = "0";
+            this.lblSehirSayisi.Click += new System.EventHandler(this.labelControl9_Click);
             // 
             // labelControl10
             // 
@@ -458,7 +461,7 @@
             // 
             this.panelControl10.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.panelControl10.Appearance.Options.UseBackColor = true;
-            this.panelControl10.Controls.Add(this.labelControl19);
+            this.panelControl10.Controls.Add(this.lblBugunGorevi);
             this.panelControl10.Controls.Add(this.labelControl20);
             this.panelControl10.Location = new System.Drawing.Point(846, 155);
             this.panelControl10.LookAndFeel.SkinMaskColor = System.Drawing.Color.Khaki;
@@ -470,17 +473,17 @@
             this.panelControl10.Size = new System.Drawing.Size(255, 115);
             this.panelControl10.TabIndex = 23;
             // 
-            // labelControl19
+            // lblBugunGorevi
             // 
-            this.labelControl19.Appearance.Font = new System.Drawing.Font("Tahoma", 24.8F, System.Drawing.FontStyle.Bold);
-            this.labelControl19.Appearance.ForeColor = System.Drawing.Color.Blue;
-            this.labelControl19.Appearance.Options.UseFont = true;
-            this.labelControl19.Appearance.Options.UseForeColor = true;
-            this.labelControl19.Location = new System.Drawing.Point(108, 52);
-            this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(26, 49);
-            this.labelControl19.TabIndex = 2;
-            this.labelControl19.Text = "0";
+            this.lblBugunGorevi.Appearance.Font = new System.Drawing.Font("Tahoma", 24.8F, System.Drawing.FontStyle.Bold);
+            this.lblBugunGorevi.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.lblBugunGorevi.Appearance.Options.UseFont = true;
+            this.lblBugunGorevi.Appearance.Options.UseForeColor = true;
+            this.lblBugunGorevi.Location = new System.Drawing.Point(108, 52);
+            this.lblBugunGorevi.Name = "lblBugunGorevi";
+            this.lblBugunGorevi.Size = new System.Drawing.Size(26, 49);
+            this.lblBugunGorevi.TabIndex = 2;
+            this.lblBugunGorevi.Text = "0";
             // 
             // labelControl20
             // 
@@ -490,9 +493,10 @@
             this.labelControl20.Appearance.Options.UseForeColor = true;
             this.labelControl20.Location = new System.Drawing.Point(27, 5);
             this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(196, 22);
+            this.labelControl20.Size = new System.Drawing.Size(170, 22);
             this.labelControl20.TabIndex = 0;
-            this.labelControl20.Text = "Maximum Departman";
+            this.labelControl20.Text = "Bugünün Görevleri";
+            this.labelControl20.Click += new System.EventHandler(this.labelControl20_Click);
             // 
             // panelControl11
             // 
@@ -578,7 +582,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(148, 0);
+            this.ClientSize = new System.Drawing.Size(1157, 488);
             this.Controls.Add(this.panelControl10);
             this.Controls.Add(this.panelControl11);
             this.Controls.Add(this.panelControl12);
@@ -649,13 +653,13 @@
         private DevExpress.XtraEditors.LabelControl lblToplamFirma;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.PanelControl panelControl3;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.LabelControl lblSektor;
+        private DevExpress.XtraEditors.LabelControl lblSektorsayisi;
         private DevExpress.XtraEditors.PanelControl panelControl4;
         private DevExpress.XtraEditors.LabelControl lblToplamDepartman;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.PanelControl panelControl5;
-        private DevExpress.XtraEditors.LabelControl labelControl9;
+        private DevExpress.XtraEditors.LabelControl lblSehirSayisi;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.PanelControl panelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl13;
@@ -664,7 +668,7 @@
         private DevExpress.XtraEditors.LabelControl lblAktifIs;
         private DevExpress.XtraEditors.LabelControl lblAktifIsss;
         private DevExpress.XtraEditors.PanelControl panelControl10;
-        private DevExpress.XtraEditors.LabelControl labelControl19;
+        private DevExpress.XtraEditors.LabelControl lblBugunGorevi;
         private DevExpress.XtraEditors.LabelControl labelControl20;
         private DevExpress.XtraEditors.PanelControl panelControl11;
         private DevExpress.XtraEditors.LabelControl labelControl21;

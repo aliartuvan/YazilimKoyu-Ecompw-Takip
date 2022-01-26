@@ -32,6 +32,10 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.dateBitis = new DevExpress.XtraEditors.DateEdit();
+            this.dateBaslangic = new DevExpress.XtraEditors.DateEdit();
+            this.dateMulakat = new DevExpress.XtraEditors.DateEdit();
+            this.dateCV = new DevExpress.XtraEditors.DateEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -43,24 +47,20 @@
             this.btnList = new DevExpress.XtraEditors.SimpleButton();
             this.txtId = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.dateCV = new DevExpress.XtraEditors.DateEdit();
-            this.dateMulakat = new DevExpress.XtraEditors.DateEdit();
-            this.dateBaslangic = new DevExpress.XtraEditors.DateEdit();
-            this.dateBitis = new DevExpress.XtraEditors.DateEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAd.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateCV.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateCV.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateMulakat.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateMulakat.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateBaslangic.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateBaslangic.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateBitis.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateBitis.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateBaslangic.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateBaslangic.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateMulakat.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateMulakat.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateCV.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateCV.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAd.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -100,6 +100,63 @@
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(342, 422);
             this.groupControl1.TabIndex = 2;
+            // 
+            // dateBitis
+            // 
+            this.dateBitis.EditValue = null;
+            this.dateBitis.Location = new System.Drawing.Point(132, 238);
+            this.dateBitis.Name = "dateBitis";
+            this.dateBitis.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.dateBitis.Properties.Appearance.Options.UseFont = true;
+            this.dateBitis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateBitis.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateBitis.Size = new System.Drawing.Size(188, 28);
+            this.dateBitis.TabIndex = 16;
+            // 
+            // dateBaslangic
+            // 
+            this.dateBaslangic.EditValue = null;
+            this.dateBaslangic.Location = new System.Drawing.Point(132, 200);
+            this.dateBaslangic.Name = "dateBaslangic";
+            this.dateBaslangic.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.dateBaslangic.Properties.Appearance.Options.UseFont = true;
+            this.dateBaslangic.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateBaslangic.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateBaslangic.Size = new System.Drawing.Size(188, 28);
+            this.dateBaslangic.TabIndex = 15;
+            // 
+            // dateMulakat
+            // 
+            this.dateMulakat.EditValue = null;
+            this.dateMulakat.Location = new System.Drawing.Point(132, 164);
+            this.dateMulakat.Name = "dateMulakat";
+            this.dateMulakat.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.dateMulakat.Properties.Appearance.Options.UseFont = true;
+            this.dateMulakat.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateMulakat.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateMulakat.Size = new System.Drawing.Size(188, 28);
+            this.dateMulakat.TabIndex = 14;
+            // 
+            // dateCV
+            // 
+            this.dateCV.EditValue = null;
+            this.dateCV.Location = new System.Drawing.Point(132, 123);
+            this.dateCV.Name = "dateCV";
+            this.dateCV.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.dateCV.Properties.Appearance.Options.UseFont = true;
+            this.dateCV.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateCV.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateCV.Size = new System.Drawing.Size(188, 28);
+            this.dateCV.TabIndex = 3;
+            this.dateCV.EditValueChanged += new System.EventHandler(this.dateCV_EditValueChanged);
             // 
             // labelControl5
             // 
@@ -198,62 +255,6 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Eğitim ID :";
             // 
-            // dateCV
-            // 
-            this.dateCV.EditValue = null;
-            this.dateCV.Location = new System.Drawing.Point(132, 123);
-            this.dateCV.Name = "dateCV";
-            this.dateCV.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.dateCV.Properties.Appearance.Options.UseFont = true;
-            this.dateCV.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateCV.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateCV.Size = new System.Drawing.Size(188, 28);
-            this.dateCV.TabIndex = 3;
-            // 
-            // dateMulakat
-            // 
-            this.dateMulakat.EditValue = null;
-            this.dateMulakat.Location = new System.Drawing.Point(132, 164);
-            this.dateMulakat.Name = "dateMulakat";
-            this.dateMulakat.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.dateMulakat.Properties.Appearance.Options.UseFont = true;
-            this.dateMulakat.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateMulakat.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateMulakat.Size = new System.Drawing.Size(188, 28);
-            this.dateMulakat.TabIndex = 14;
-            // 
-            // dateBaslangic
-            // 
-            this.dateBaslangic.EditValue = null;
-            this.dateBaslangic.Location = new System.Drawing.Point(132, 200);
-            this.dateBaslangic.Name = "dateBaslangic";
-            this.dateBaslangic.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.dateBaslangic.Properties.Appearance.Options.UseFont = true;
-            this.dateBaslangic.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateBaslangic.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateBaslangic.Size = new System.Drawing.Size(188, 28);
-            this.dateBaslangic.TabIndex = 15;
-            // 
-            // dateBitis
-            // 
-            this.dateBitis.EditValue = null;
-            this.dateBitis.Location = new System.Drawing.Point(132, 238);
-            this.dateBitis.Name = "dateBitis";
-            this.dateBitis.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.dateBitis.Properties.Appearance.Options.UseFont = true;
-            this.dateBitis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateBitis.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateBitis.Size = new System.Drawing.Size(188, 28);
-            this.dateBitis.TabIndex = 16;
-            // 
             // frmEgitimler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -269,16 +270,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAd.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateCV.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateCV.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateMulakat.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateMulakat.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateBaslangic.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateBaslangic.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateBitis.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateBitis.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateBaslangic.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateBaslangic.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateMulakat.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateMulakat.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateCV.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateCV.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAd.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

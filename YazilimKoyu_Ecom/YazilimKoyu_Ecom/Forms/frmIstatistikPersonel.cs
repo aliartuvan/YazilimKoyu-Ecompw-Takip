@@ -38,6 +38,10 @@ namespace YazilimKoyu_Ecom.Forms
             lblAktifIs.Text=db.TblGorevler.Count(x => x.Durum=="1").ToString();
             lblPasifIs.Text=db.TblGorevler.Count(x => x.Durum=="0").ToString();
             lblSonGorev.Text=db.TblGorevler.OrderByDescending(x => x.id).Select(x => x.Aciklama).FirstOrDefault();
+            lblSektor.Text=db.TblFirmalar.Select(x=>x.Sektör).Distinct().Count().ToString();
+            lblSehirSayisi.Text=db.TblFirmalar.Select(x=>x.il).Distinct().Count().ToString();   
+            DateTime bugun = DateTime.Today;
+            lblBugunGorevi.Text=db.TblGorevler.Count(x=>x.Tarih==bugun).ToString();
             
             
 
@@ -52,6 +56,26 @@ namespace YazilimKoyu_Ecom.Forms
         }
 
         private void labelControl16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelControl3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void labelControl9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl20_Click(object sender, EventArgs e)
         {
 
         }

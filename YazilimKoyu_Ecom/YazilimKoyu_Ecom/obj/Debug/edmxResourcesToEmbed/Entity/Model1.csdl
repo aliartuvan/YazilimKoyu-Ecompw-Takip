@@ -70,7 +70,7 @@
     <Property Name="GorevVeren" Type="Int32" />
     <Property Name="GorevAlan" Type="Int32" />
     <Property Name="Aciklama" Type="String" MaxLength="370" FixedLength="true" Unicode="true" />
-    <Property Name="Durum" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="Durum" Type="String" MaxLength="30" Unicode="true" FixedLength="true" />
     <Property Name="Tarih" Type="DateTime" Precision="0" />
     <NavigationProperty Name="TblGorevDetaylar" Relationship="Self.FK_TblGorevDetaylar_TblGorevler" FromRole="TblGorevler" ToRole="TblGorevDetaylar" />
     <NavigationProperty Name="TblPersonel" Relationship="Self.FK_TblGorevler_TblPersonel" FromRole="TblGorevler" ToRole="TblPersonel" />
@@ -91,6 +91,9 @@
     <NavigationProperty Name="TblGorevler" Relationship="Self.FK_TblGorevler_TblPersonel" FromRole="TblPersonel" ToRole="TblGorevler" />
     <NavigationProperty Name="TblGorevler1" Relationship="Self.FK_TblGorevler_TblPersonel1" FromRole="TblPersonel" ToRole="TblGorevler" />
     <Property Name="Durum" Type="Boolean" />
+    <Property Name="İl" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="DogumTarihi" Type="DateTime" Precision="0" />
+    <Property Name="sifre" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
   </EntityType>
   <Association Name="FK_TblPersonel_TblDepartmanlar">
     <End Role="TblDepartmanlar" Type="Self.TblDepartmanlar" Multiplicity="0..1" />
@@ -165,5 +168,37 @@
       <End Role="TblPersonel" EntitySet="TblPersonel" />
       <End Role="TblGorevler" EntitySet="TblGorevler" />
     </AssociationSet>
+    <EntitySet Name="sysdiagrams" EntityType="dbIsTakipModel.sysdiagrams" />
+    <EntitySet Name="GetirBasvuru2" EntityType="dbIsTakipModel.GetirBasvuru2" />
   </EntityContainer>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="GetirBasvuru2">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="your_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="your_email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="telefon_no" Type="Double" />
+    <Property Name="ulke" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ikamet_sehri" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="okul" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="bolum" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="lisans_onlisans" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="mezun_sinif" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ngilizcesev" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="yazilimdilleri" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="linkedinurl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="basvuru_detaylari" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="F15" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

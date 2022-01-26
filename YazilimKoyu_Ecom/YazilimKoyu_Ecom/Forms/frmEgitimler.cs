@@ -90,5 +90,10 @@ namespace YazilimKoyu_Ecom.Forms
             XtraMessageBox.Show( x + " Numaralı eğitim sistemden silindi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             List();
         }
+
+        private void dateCV_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

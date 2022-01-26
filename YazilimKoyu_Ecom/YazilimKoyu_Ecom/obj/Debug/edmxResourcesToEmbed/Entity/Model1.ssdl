@@ -1,5 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="dbIsTakipModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'dbIsTakip.dbo.GetirBasvuru2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="GetirBasvuru2">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="your-name" Type="nvarchar" MaxLength="255" />
+    <Property Name="your-email" Type="nvarchar" MaxLength="255" />
+    <Property Name="telefon-no" Type="float" />
+    <Property Name="ulke" Type="nvarchar" MaxLength="255" />
+    <Property Name="ikamet-sehri" Type="nvarchar" MaxLength="255" />
+    <Property Name="okul" Type="nvarchar" MaxLength="255" />
+    <Property Name="bolum" Type="nvarchar" MaxLength="255" />
+    <Property Name="lisans-onlisans" Type="nvarchar" MaxLength="255" />
+    <Property Name="mezun-sinif" Type="nvarchar" MaxLength="255" />
+    <Property Name="ngilizcesev" Type="nvarchar" MaxLength="255" />
+    <Property Name="yazilimdilleri" Type="nvarchar" MaxLength="255" />
+    <Property Name="linkedinurl" Type="nvarchar" MaxLength="255" />
+    <Property Name="basvuru-detaylari" Type="nvarchar(max)" />
+    <Property Name="F15" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
   <EntityType Name="TblAdmin">
     <Key>
       <PropertyRef Name="id" />
@@ -83,19 +115,10 @@
     <Property Name="Gorsel" Type="nvarchar" MaxLength="150" />
     <Property Name="Departman" Type="int" />
     <Property Name="Durum" Type="bit" />
+    <Property Name="İl" Type="nvarchar" MaxLength="30" />
+    <Property Name="DogumTarihi" Type="date" />
+    <Property Name="sifre" Type="nchar" MaxLength="20" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6013: The table/view 'dbIsTakip.dbo.TblUyeler' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="TblUyeler">
-          <Property Name="id" Type="int" />
-          <Property Name="Ad" Type="nvarchar" MaxLength="50" />
-          <Property Name="Soyad" Type="nvarchar" MaxLength="50" />
-          <Property Name="il" Type="nvarchar" MaxLength="30" />
-          <Property Name="ilce" Type="nvarchar" MaxLength="40" />
-          <Property Name="mail" Type="nvarchar" MaxLength="50" />
-          <Property Name="telefon" Type="nvarchar" MaxLength="15" />
-          <Property Name="Alan" Type="nvarchar" MaxLength="30" />
-        </EntityType>-->
   <Association Name="FK_TblGorevDetaylar_TblGorevler">
     <End Role="TblGorevler" Type="Self.TblGorevler" Multiplicity="0..1" />
     <End Role="TblGorevDetaylar" Type="Self.TblGorevDetaylar" Multiplicity="*" />
@@ -145,6 +168,7 @@ warning 6013: The table/view 'dbIsTakip.dbo.TblUyeler' does not have a primary k
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="dbIsTakipModelStoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblDepartmanlar" EntityType="Self.TblDepartmanlar" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblEgitim" EntityType="Self.TblEgitim" Schema="dbo" store:Type="Tables" />
@@ -153,6 +177,25 @@ warning 6013: The table/view 'dbIsTakip.dbo.TblUyeler' does not have a primary k
     <EntitySet Name="TblGorevDetaylar" EntityType="Self.TblGorevDetaylar" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblGorevler" EntityType="Self.TblGorevler" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblPersonel" EntityType="Self.TblPersonel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GetirBasvuru2" EntityType="Self.GetirBasvuru2" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GetirBasvuru2].[Id] AS [Id], 
+    [GetirBasvuru2].[your-name] AS [your-name], 
+    [GetirBasvuru2].[your-email] AS [your-email], 
+    [GetirBasvuru2].[telefon-no] AS [telefon-no], 
+    [GetirBasvuru2].[ulke] AS [ulke], 
+    [GetirBasvuru2].[ikamet-sehri] AS [ikamet-sehri], 
+    [GetirBasvuru2].[okul] AS [okul], 
+    [GetirBasvuru2].[bolum] AS [bolum], 
+    [GetirBasvuru2].[lisans-onlisans] AS [lisans-onlisans], 
+    [GetirBasvuru2].[mezun-sinif] AS [mezun-sinif], 
+    [GetirBasvuru2].[ngilizcesev] AS [ngilizcesev], 
+    [GetirBasvuru2].[yazilimdilleri] AS [yazilimdilleri], 
+    [GetirBasvuru2].[linkedinurl] AS [linkedinurl], 
+    [GetirBasvuru2].[basvuru-detaylari] AS [basvuru-detaylari], 
+    [GetirBasvuru2].[F15] AS [F15]
+    FROM [dbo].[GetirBasvuru2] AS [GetirBasvuru2]</DefiningQuery>
+    </EntitySet>
     <AssociationSet Name="FK_TblGorevDetaylar_TblGorevler" Association="Self.FK_TblGorevDetaylar_TblGorevler">
       <End Role="TblGorevler" EntitySet="TblGorevler" />
       <End Role="TblGorevDetaylar" EntitySet="TblGorevDetaylar" />
