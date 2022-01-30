@@ -23,12 +23,12 @@ namespace YazilimKoyu_Ecom.Forms
         {
             MailMessage message = new MailMessage();
             SmtpClient smtpClient = new SmtpClient();
-            smtpClient.Credentials=new System.Net.NetworkCredential("ali.artuvan@yazilimkoyu.org", "ali-yazkoy-sifre12.");
+            smtpClient.Credentials=new System.Net.NetworkCredential("/*mail gelmeli*/", "/*şifre gelmeli*/");
             smtpClient.Port =587;
             smtpClient.Host = "smtp.yandex.com.tr";
             smtpClient.EnableSsl = true;
             message.To.Add(txtAlici.Text);
-            message.From= new MailAddress("ali.artuvan@yazilimkoyu.org");
+            message.From= new MailAddress("/*mail*/");
             message.Subject= (txtBaslik.Text);
             message.Body= (txtIcerik.Text);
             smtpClient.Send(message);
